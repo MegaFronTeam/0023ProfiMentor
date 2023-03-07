@@ -1,10 +1,26 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
+		.container-fluid
 			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
+				h1 Подбери профессию опираясь на свои качества
+				h2 Подбери профессию опираясь на свои качества
+				h3 Подбери профессию опираясь на свои качества
+				h4 Подбери профессию опираясь на свои качества
+				h5 Подбери профессию опираясь на свои качества
+				h6 Подбери профессию опираясь на свои качества
+			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quas iusto ab fuga ipsa saepe veritatis reprehenderit enim debitis ea. Officia maiores vel aut nostrum esse quas a accusantium sint.
+			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quas iusto ab fuga ipsa nim debitis ea. Officia maiores vel aut nostrum esse quas a accusantium sint.
+			p Lorem ipsum dolor adipisicing elit. Quos quas iusto ab fuga ipsa saepe veritatis reprehenderit enim debitis ea. Officia maiores vel aut nostrum esse quas a accusantium sint.
+			+form-wrap
+				+input('Ваше ФИО')
+				+input('Вопрос ментору (опишите вкратце себе и свои ожидания от будущей профессии)', 'textarea')
 			.row
-						
+				.col-auto
+					+e.btn.btn.btn-primary(href="#") Подобрать профессию
+				.col-auto
+					+e.btn.btn.btn-white(href="#") Подобрать профессию
+				.col-auto
+					+e.btn.btn.btn-outline-primary(href="#") Подобрать профессию
+
 	// end headerBlock

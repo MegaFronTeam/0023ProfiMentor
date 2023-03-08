@@ -1,34 +1,85 @@
 {
-	"nav":[
-		{ "name":"Наши работы", "url":"#"},
-		{	"name":"Цены", "url":"#"},
-		{"name":"Калькулятор", "url":"#"},
-		{"name":"Акции", "url":"#"} ,
+	"nav": [
 		{
-			"name":"Заказать", 
-			"url":"#"
-			}
+			"name": "Наши работы",
+			"url": "#"
+		},
+		{
+			"name": "Цены",
+			"url": "#"
+		},
+		{
+			"name": "Калькулятор",
+			"url": "#"
+		},
+		{
+			"name": "Акции",
+			"url": "#"
+		},
+		{
+			"name": "Заказать",
+			"url": "#"
+		}
 	],
-	"social":[
-		"fb","instagram","telegram"
+	"asideNav": [
+		{
+			"name": "Главная",
+			"url": "#",
+			"icon": "home"
+		},
+		{
+			"name": "Профессии",
+			"url": "#",
+			"icon": "click"
+		},
+		{
+			"name": "Статьи",
+			"url": "#",
+			"icon": "news"
+		},
+		{
+			"name": "Советы",
+			"url": "#",
+			"icon": "tooltip"
+		},
+		{
+			"name": "Квалификация",
+			"url": "#",
+			"icon": "rocket"
+		},
+		{
+			"name": "Обучение",
+			"url": "#",
+			"icon": "bank"
+		},
+		{
+			"name": "О нас",
+			"url": "#",
+			"icon": "info-circle"
+		}
 	],
-	"index":{
+	"social": [
+		"fb",
+		"instagram",
+		"telegram"
+	],
+	"index": {
 		"head": {
 			"title": "тест dffsdf dfsdтест 2222"
 		}
 	},
 	"items": [
-			{
+		{
 			"title": "заловок",
 			"text": "текст"
 		},
-			{
+		{
 			"title": "заловок 22",
 			"text": "текст"
 		},
-			{
+		{
 			"title": "заловок 33",
 			"text": "текст"
-			}
-		]
-	}
+		}
+	]
+}

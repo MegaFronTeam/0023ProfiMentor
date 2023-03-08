@@ -368,6 +368,11 @@ function eventHandler() {
 		freeMode: true,
 		watchOverflow: true
 	});
+	// const navSlider = new Swiper('.nav-slider-js', {
+	// 	slidesPerView: 'auto',
+	// 	freeMode: true,
+	// 	watchOverflow: true
+	// });
 	
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,

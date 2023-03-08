@@ -45,3 +45,26 @@ mixin page-head(t,...items)
 			+breadcrumb('Главная',...items)
 
 			h1= t
+
+mixin asideContent()
+	+b.aside-block
+		+e.logo(href="/")
+			+img('img/svg/main-logo.svg')
+		//- +asideMnu()
+		nav
+			ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+				mixin menu-item(t, i, l = '#')
+					li.menu-item(itemprop="item" )&attributes(attributes)
+						a(href= `${l}` itemprop="url")!= t
+							+icon(`${i}`)
+				+menu-item(`Главная`, `home`)
+				+menu-item(`Профессии`, `click`)
+				+menu-item(`Статьи`, `news`).d-none.d-sm-block
+				+menu-item(`Советы`, `tooltip`).d-none.d-sm-block
+				+menu-item(`Квалификация`, `rocket`).d-none.d-sm-block
+				+menu-item(`Обучение`, `bank`)
+				+menu-item(`О нас`, `info-circle`)
+		+e.help.menu-item
+			a(href="#") Помощь
+				+icon('messages')
+			

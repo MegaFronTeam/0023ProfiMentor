@@ -15,22 +15,20 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= index.head.title
+	- let  title= 'Главная'
 	title= title
 block pagecontent
-	//- +mob-mnu()
-	
-	
-	+header()
-		+top-nav()
-		+topLine
-	main
-		+headerBlock 
-		//- +sCatalog
-		+sForm()
-		+sContact()
-		
-	+footer()
+	.aside-wrap
+		+asideContent()
+			
+	.main-center-wrap
+		main
+			+headerBlock 
+			//- +sCatalog
+			+sForm()
+			+sContact()
+			
+		+footer()
       
 
 

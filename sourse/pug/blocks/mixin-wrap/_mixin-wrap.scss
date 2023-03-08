@@ -103,8 +103,10 @@
 }
 
 .aside-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	@include media-breakpoint-up(md) {
-		display: flex;
 		flex-direction: column;
 		padding: rem(28);
 		background-image: linear-gradient(180deg, #101d22 0%, #101222 0.01%, #1b0c36 100%);
@@ -240,6 +242,12 @@
 			// 		stroke: $primary;
 			// 	}
 			// }
+			@include media-breakpoint-down(md) {
+				width: rem(80);
+				height: rem(80);
+				border: 1px solid $border-color;
+				border-radius: $border-radius-xl;
+			}
 			.icon {
 				opacity: 0.2;
 			}

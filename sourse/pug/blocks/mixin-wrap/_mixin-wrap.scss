@@ -138,6 +138,7 @@
 			z-index: -1;
 			width: rem(64);
 			height: rem(64);
+			border-radius: 50%;
 			@include media-breakpoint-up(md) {
 				width: rem(81);
 				height: rem(81);

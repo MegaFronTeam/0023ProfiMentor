@@ -2,8 +2,8 @@
 	font-size: rem(11);
 	line-height: calc(13 / 11);
 	margin-top: auto;
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: 0;
+	--sPB: 0;
 	// --sTPB: #{rem()};
 	&__wrap {
 		padding: rem(16);

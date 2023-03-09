@@ -1,5 +1,5 @@
 .soc {
-	@include roww(10px, m);
+	@include roww(#{rem(20)}, m);
 	display: flex;
 	&__item {
 		text-decoration: none !important;
@@ -7,13 +7,16 @@
 		@include mt;
 		display: grid;
 		place-items: center;
+		opacity: 0.5;
+		color: #D9D9D9;
 		&:hover {
 			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
+			opacity: 1;
 		}
 	}
 	.icon {
-		font-size: rem(30);
+		font-size: rem(16);
 	}
 }
 
@@ -157,6 +160,7 @@
 			padding-bottom: rem(16);
 			background-image: linear-gradient(0deg, #101222 -13.21%, #1b0c36 100%);
 			border-radius: $border-radius-xl $border-radius-xl 0px 0px;
+			z-index: 10;
 		}
 		@include media-breakpoint-down(sm) {
 			padding-left: rem(9);

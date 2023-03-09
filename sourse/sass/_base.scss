@@ -100,10 +100,13 @@ body {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
-	padding: var(--main-gutter);
 	display: flex;
 	flex-direction: column;
+	padding: calc(env(safe-area-inset-top, 0px) + var(--main-gutter)) var(--main-gutter)
+		calc(env(safe-area-inset-bottom, 0px) + var(--main-gutter) + #{rem(69)});
 	@include media-breakpoint-up(md) {
+		padding: calc(env(safe-area-inset-top, 0px) + var(--main-gutter)) var(--main-gutter)
+			calc(env(safe-area-inset-bottom, 0px) + var(--main-gutter));
 		flex-direction: row;
 	}
 	// flex-direction: row;

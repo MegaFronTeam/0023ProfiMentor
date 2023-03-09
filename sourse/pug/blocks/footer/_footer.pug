@@ -1,9 +1,13 @@
 mixin footer()
 	+b.FOOTER.footer.section
-		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+		+e.wrap
+			+e.row.row
+				.col-sm-auto
+					+e.copyright © #[span.currentYear] Профиментор
+				.col-sm-auto
+					a(href="#") Политика конфиденциальности
+				.col-sm-auto
+					a(href="#") Обратная связь
+				.col-sm
+					+soc()
+

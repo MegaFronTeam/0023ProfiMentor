@@ -110,10 +110,13 @@
 	justify-content: space-between;
 	align-items: center;
 	@include media-breakpoint-up(md) {
+		justify-content: flex-start;
 		flex-direction: column;
-		padding: rem(28);
+		padding: rem(24.100) rem(28) rem(28) rem(28);
 		background-image: linear-gradient(180deg, #101d22 0%, #101222 0.01%, #1b0c36 100%);
 		border-radius: $border-radius-xl;
+		flex-grow: 1;
+    max-height: rem(912.1);
 	}
 	&__logo {
 		position: relative;
@@ -175,6 +178,7 @@
 			position: relative;
 			flex-direction: column;
 			align-items: center;
+			margin-bottom: rem(24);
 		}
 		@include media-breakpoint-down(md) {
 			width: 100%;
@@ -233,7 +237,7 @@
 	}
 	&__help.menu-item {
 		@include media-breakpoint-up(md) {
-			margin-top: rem(200);
+			margin-top: auto;
 		}
 		a {
 			opacity: 1;

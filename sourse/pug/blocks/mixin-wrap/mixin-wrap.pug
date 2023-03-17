@@ -67,4 +67,10 @@ mixin asideContent()
 		+e.help.menu-item
 			a(href="#") Помощь
 				+icon('messages')
-			
+
+mixin mentorHelp()
+	+b.mentorHelp
+		h3 Попроси помощи у&nbsp;ментора
+		p Наш специалист поможет вам подобрать профессию исходя из&nbsp;качеств и&nbsp;особенностей вашей личности
+		+e.btn.btn.btn-white(href="#") Написать ментору
+		+img('img/mentorHelp.png')

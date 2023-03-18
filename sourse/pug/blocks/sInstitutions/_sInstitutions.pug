@@ -1,0 +1,15 @@
+mixin sInstitutions(data)
+	// start sInstitutions
+	+b.SECTION.sInstitutions.section#sInstitutions&attributes(attributes)
+		.slider-wrapper
+			+section-title-arrows(`Топ учебных заведений`)
+			+e.slider.swiper.standard-slider-js
+				.swiper-wrapper
+					- for (var x = 0; x < 2; x++)
+						+e.slide.swiper-slide
+							+institutionItem(1, `Innopolis University`, `Рыбатекст используется дизайнерами, проектировщиками и&nbsp;фронтендерами, когда нужно быстро заполнить ...`)
+						+e.slide.swiper-slide
+							+institutionItem(3, `ВШЭ`, `Рыбатекст используется дизайнерами, проектировщиками и&nbsp;фронтендерами, когда нужно быстро заполнить ...`)
+						+e.slide.swiper-slide
+							+institutionItem(2, `МАИ`, `Рыбатекст используется дизайнерами, проектировщиками и&nbsp;фронтендерами, когда нужно быстро заполнить ...`)
+	// end sInstitutions

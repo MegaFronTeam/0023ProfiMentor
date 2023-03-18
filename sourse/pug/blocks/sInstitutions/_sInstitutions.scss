@@ -1,5 +1,5 @@
-// start .sDemanded
-.sDemanded {
+// start .sInstitutions
+.sInstitutions {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
@@ -15,20 +15,33 @@
 	}
 	&__slide {
 		height: auto;
-		max-width: rem(288);
+		max-width: rem(322);
 		margin-right: rem(8);
+		@include media-breakpoint-up(md) {
+			max-width: rem(392);
+		}
+		// max-width: rem(911);
 	}
 	&__slider {
 		padding: var(--main-gutter);
 		margin: calc(var(--main-gutter) * -1);
-		// overflow: visible;
 		// @include media-breakpoint-up(md) {
-		// 	overflow: hidden;
-		// 	margin-right: calc(var(--main-gutter) * -1);
 		// }
 	}
-	.profession-item {
+	.institution-item {
 		height: 100%;
+		align-items: flex-start;
+		&__img-wrap {
+			--ratio: 100/116;
+			@include media-breakpoint-down(md) {
+				width: rem(84);
+			}
+		}
+		&__footer {
+			@include media-breakpoint-down(md) {
+				flex-direction: column;
+			}
+		}
 	}
 
 	@include media-breakpoint-up(xl) {
@@ -45,4 +58,4 @@
 	}
 	@include media-breakpoint-down(xl) {
 	}
-} // end.sDemanded
+} // end.sInstitutions

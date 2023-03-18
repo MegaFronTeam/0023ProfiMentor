@@ -101,3 +101,15 @@ mixin professionItem(h, t)
 				+professionProp(`Дисциплинированность`, `var(--bs-cyan)`)
 				+professionProp(`+2`, `var(--bs-dark)`)
 
+mixin institutionItem(i, h, t)
+	+b.institution-item(href="#")
+		+e.img-wrap
+			.img-wrap-center 
+				+img(`img/institution-${i}.png`)
+		+e.content
+			+e.head
+				h3!= h
+				p!= t
+			+e.footer
+				span 25&nbsp;профессий
+				+e.demanded 3&nbsp;востребованных

@@ -316,6 +316,7 @@
 		align-items: center;
 	}
 	.arrow-wrap {
+		@include roww(#{rem(8)}, m);
 		display: none;
 		@include media-breakpoint-up(md) {
 			display: flex;

@@ -118,6 +118,7 @@ body {
 		&::before {
 			content: "";
 			position: absolute;
+			border-radius: 50%;
 			width: rem(324);
 			height: rem(324);
 			right: rem(-177);
@@ -129,6 +130,7 @@ body {
 		&::after {
 			content: "";
 			position: absolute;
+			border-radius: 50%;
 			width: rem(832);
 			height: rem(832);
 			left: rem(-326);
@@ -170,6 +172,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
+	@include media-breakpoint-up(md) {
+		max-width: calc(100vw - #{rem(143.891)} - var(--main-gutter) * 3);
+	}
 	// @include media-breakpoint-up(md) {
 	// 	position: relative;
 	// 	&::before {
@@ -608,4 +613,12 @@ iframe {
 		height: 100%;
 		object-fit: cover;
 	}
+}
+h1,
+.h1 {
+	font-weight: 700;
+}
+h2,
+.h2 {
+	font-weight: 600;
 }

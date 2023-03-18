@@ -13,10 +13,20 @@
 	}
 	&__item {
 	}
+	&__slide {
+		height: auto;
+		max-width: rem(288);
+		margin-right: rem(8);
+	}
 	&__slider {
+		overflow: visible;
 		@include media-breakpoint-up(md) {
+			overflow: hidden;
 			margin-right: calc(var(--main-gutter) * -1);
 		}
+	}
+	.profession-item {
+		height: 100%;
 	}
 
 	@include media-breakpoint-up(xl) {

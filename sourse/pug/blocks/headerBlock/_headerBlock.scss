@@ -1,13 +1,13 @@
 // start .headerBlock
 .headerBlock {
-	--sPT: #{rem(15)};
-	--sPB: #{rem(35)};
+	// --sPT: #{rem(15)};
+	// --sPB: #{rem(35)};
 	// --sTPB: #{rem()};
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(0)};
-		--sPB: #{rem(48)};
+		// --sPB: #{rem(48)};
 	}
 	&__row {
 		// --bs-gutter-x: #{rem(5.8)};
@@ -16,7 +16,7 @@
 	&__wrap {
 		position: relative;
 		border: 1px solid $border-color;
-		border-radius: rem(16);
+		border-radius: $border-radius-xl;
 		overflow: hidden;
 		padding: rem(24);
 		background-color: var(--bs-body-bg);

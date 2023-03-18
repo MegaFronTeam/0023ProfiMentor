@@ -20,7 +20,7 @@ mixin arrow()
 
 mixin ie11()
 	//- modernizer and for ie11
-	 
+
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 
 mixin addblock()
@@ -83,3 +83,21 @@ mixin section-title-arrows(t)
 			.col-auto
 				.arrow-wrap
 					+arrow()
+mixin professionProp(t, bg)
+	.col-auto
+		+e.property(style=`--propBg:${bg}`)!= t
+
+mixin professionItem(h, t)
+	+b.profession-item(href="#")
+		+e.head
+			h3!= h
+			p!= t
+		+e.row.row
+			if block
+				block
+			else
+				+professionProp(`Активность`, `var(--bs-teal)`)
+				+professionProp(`Вежливость`, `var(--bs-pink)`)
+				+professionProp(`Дисциплинированность`, `var(--bs-cyan)`)
+				+professionProp(`+2`, `var(--bs-dark)`)
+

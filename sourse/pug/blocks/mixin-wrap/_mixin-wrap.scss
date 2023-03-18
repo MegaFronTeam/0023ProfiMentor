@@ -310,3 +310,22 @@
 		}
 	}
 }
+
+.section-title {
+	.section-title__row {
+		align-items: center;
+	}
+	.arrow-wrap {
+		display: none;
+		@include media-breakpoint-up(md) {
+			display: flex;
+		}
+		.swiper-button-hand {
+			position: relative;
+			left: auto;
+			right: auto;
+			top: auto;
+			bottom: auto;
+		}
+	}
+}

@@ -74,3 +74,12 @@ mixin mentorHelp()
 		p Наш специалист поможет вам подобрать профессию исходя из&nbsp;качеств и&nbsp;особенностей вашей личности
 		+e.btn.btn.btn-white(href="#") Написать ментору
 		+img('img/mentorHelp.png')
+
+mixin section-title-arrows(t)
+	+b.section-title
+		+e.row.row
+			.col
+				h2!= t
+			.col-auto
+				.arrow-wrap
+					+arrow()

@@ -2,14 +2,8 @@ mixin sDemanded(data)
 	// start sDemanded
 	+b.SECTION.sDemanded.section#sDemanded&attributes(attributes)
 		.slider-wrapper
-			+b.section-title--arrows
-				+e.row.row
-					.col
-						h2 Востребованные профессии
-					.col-auto
-						.arrow-wrap
-							+arrow()
-			+e.slider.swiper.standard-slider-js
+			+section-title-arrows(`Востребованные профессии`)
+			+e.slider.standard-slider-js
 				.swiper-wrapper
 					.swiper-slide Slide 1
 					.swiper-slide Slide 2

@@ -116,7 +116,8 @@
 		background-image: linear-gradient(180deg, #101d22 0%, #101222 0.01%, #1b0c36 100%);
 		border-radius: $border-radius-xl;
 		flex-grow: 1;
-		max-height: rem(912.1);
+		height: rem(912.1);
+		// max-height: rem(912.1);
 	}
 	&__logo {
 		position: relative;

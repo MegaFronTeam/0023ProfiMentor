@@ -410,6 +410,21 @@ function eventHandler() {
 	};
 
 	// modal window
+	var StickyAside = new hcSticky('.aside-block--js', {
+		mobileFirst: true,
+		responsive: {
+			768: {
+				stickTo: '.aside-wrap',
+				// top: 32,
+				top: 16,
+				bottom: 16,
+			},
+			1200: {
+				top: 24,
+				bottom: 24,
+			}
+		}
+	});
 
 };
 if (document.readyState !== 'loading') {

@@ -113,3 +113,11 @@ mixin institutionItem(i, h, t)
 			+e.footer
 				span 25&nbsp;профессий
 				+e.demanded 3&nbsp;востребованных
+
+mixin adviseItem(t, p)
+	+b.adviseItem(href="#")
+		+e.wrap
+			p!= t
+		+e.footer
+			span!= p
+			+e.more Подробнее...

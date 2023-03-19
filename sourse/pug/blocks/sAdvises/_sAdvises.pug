@@ -1,0 +1,26 @@
+mixin sAdvises(data)
+	// start sAdvises
+	+b.sAdvises.section#sAdvises&attributes(attributes)
+		+e.wrapper
+			+e.row.row
+				+e.col.col-xl-auto
+					+b.section-title
+						.h1 Советы ментора
+						.sAdvises__btn.btn.btn-primary(href="#") Смотреть все
+				.col
+					+e.row-sm.row
+						.col-lg-4
+							+adviseItem(`Победи эйчара на его же поле. Три главных ответа на сложные вопросы о твоей личности`, `Для Профессия`)
+						.col-lg-4
+							+adviseItem(`Что нужно делать в непонятных ситуация при устройстве на работу`, `Для IT`)
+						.col-lg-4
+							+adviseItem(`Возьми три нейросети и сделай супер продукт. Я расскажу как удивить рекрутера в люой компании во всем мире`, `Для Профессия`)
+					//- +e.row-sm.row
+					//- 	.col-lg-4
+					//- 		+adviseItem(`Победи эйчара на&nbsp;его&nbsp;же поле. Три главных ответа на&nbsp;сложные вопросы о&nbsp;твоей личности`, `Для Профессия`)
+					//- 	.col-lg-4
+					//- 		+adviseItem(`Что нужно делать в&nbsp;непонятных ситуация при устройстве на&nbsp;работу`, `Для IT`)
+					//- 	.col-lg-4
+					//- 		+adviseItem(`Возьми три нейросети и&nbsp;сделай супер продукт. Я&nbsp;расскажу как удивить рекрутера в&nbsp;люой компании во&nbsp;всем мире`, `Для Профессия`)
+
+	// end sAdvises

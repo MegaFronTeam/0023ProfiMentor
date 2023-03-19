@@ -1,0 +1,24 @@
+mixin sMaterials(data)
+	// start sMaterials
+	+b.sMaterials.section#sMaterials&attributes(attributes)
+		+e.wrapper
+			+e.img-wrap
+				+img('img/sMaterials-bg.png')
+			+e.row.row
+				+e.col.col-sm-auto
+					+b.section-title
+						.h1 Узнайте как правильно и&nbsp;быстро повысить квалификацию в&nbsp;своей профессии
+				+e.col.col-sm-auto
+					+e.links
+						ul
+							mixin link(text)
+								li
+									a(href="#")
+										span!= text
+										+icon('arrow-right-thin')
+							+link(`Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить ...`)
+							+link(`Фронтендерами, когда нужно быстро заполнить текст статьи`)
+							+link(`Название материала в одну или несколько строк`)
+						+e.more(href="#") Все материалы
+				
+	// end sMaterials

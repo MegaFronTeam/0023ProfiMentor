@@ -3,9 +3,9 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	@include media-breakpoint-down(sm) {
-		display: none;
-	}
+	// @include media-breakpoint-down(sm) {
+	// 	display: none;
+	// }
 	&__row.row {
 		--bs-gutter-x: #{rem(8)};
 		--bs-gutter-y: var(--bs-gutter-x);

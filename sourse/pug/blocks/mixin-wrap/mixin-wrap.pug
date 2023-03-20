@@ -129,12 +129,13 @@ mixin adviseItem(t, p)
 			+e.more Подробнее...
 
 mixin articleItem(img, h, lg = false)
-	+b.articleItem(class=(lg ? '--lg' : ''))
+	+b.articleItem(href="#" class=(lg ? '--lg' : ''))
 		+e.img-wrap
 			.img-wrap-center
 				+img(`img/${img}`, lg ? 'bg' : '')
 		+e.content
-			a.h3(href="#")!= h
+			.h3!= h
+			//- a.h3(href="#")!= h
 			span 15 января 2023
 
 			

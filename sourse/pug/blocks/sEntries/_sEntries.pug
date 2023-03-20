@@ -1,22 +1,13 @@
 mixin sEntries(data)
 	// start sEntries
 	+b.SECTION.sEntries.section#sEntries&attributes(attributes)
-		.slider-wrapper
-			+section-title-arrows(`Востребованные профессии`)
-			+e.slider--js.swiper
-				.swiper-wrapper
-					- for (var x = 0; x < 2; x++)
-						+e.slide.swiper-slide
-							+professionItem(`Агент по&nbsp;сбыту энергии`, `Рыбатекст используется дизайнерами, проектировщиками и&nbsp;фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым`)
-						+e.slide.swiper-slide
-							+professionItem(`Агент по&nbsp;сбыту энергии`, `Рыбатекст используется дизайнерами, проектировщиками и&nbsp;фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым`)
-						+e.slide.swiper-slide
-							+professionItem(`Архитектор программного обеспечения`, `Рыбатекст используется дизайнерами, проектировщиками и&nbsp;фронтендерами, когда нужно быстро`)
-								+professionProp(`Принципиальность`, `var(--bs-teal)`)
-								+professionProp(`Оптимизм`, `var(--bs-orange)`)
-						+e.slide.swiper-slide
-							+professionItem(`Ассистент режиссера по&nbsp;актёрам`, `Рыбатекст используется дизайнерами, проектировщиками и&nbsp;фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым екст используется дизайнерами...`)
-						+e.slide.swiper-slide
-							+professionItem(`Банковский кассир-операционист`, `Рыбатекст используется дизайнерами, проектировщиками`)
+		+section-title-arrows(`Статьи`, 'l')
+		+e.row.row
+			.col-lg-4.col-xl-6
+				+articleItem(`articleItem-bg-1.jpg`,`Новые профессии 2023 года. Подборка лучшего`, true)
+			.col-sm-6.col-lg-4.col-xl-3
+				+articleItem(`articleItem-bg-2.png`, `Защита данных от мошенников в банковских приложениях`)
+			.col-sm-6.col-lg-4.col-xl-3
+				+articleItem(`articleItem-bg-3.png`, `Как стать тестировщиком мобильных приложений без специальных навыков`)
 
 	// end sEntries

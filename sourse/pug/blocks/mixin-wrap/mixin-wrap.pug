@@ -75,14 +75,20 @@ mixin mentorHelp()
 		+e.btn.btn.btn-white(href="#") Написать ментору
 		+img('img/mentorHelp.png')
 
-mixin section-title-arrows(t)
+mixin section-title-arrows(t, l)
 	+b.section-title
 		+e.row.row
 			.col
 				h2!= t
 			.col-auto
-				.arrow-wrap
-					+arrow()
+				if l
+					+e.link-more(href="#")
+						+icon('arrow-narrow-right')
+				else
+					.arrow-wrap
+						+arrow()
+
+
 mixin professionProp(t, bg)
 	.col-auto
 		+e.property(style=`--propBg:${bg}`)!= t
@@ -121,3 +127,14 @@ mixin adviseItem(t, p)
 		+e.footer
 			span!= p
 			+e.more Подробнее...
+
+mixin articleItem(img, h, lg = false)
+	+b.articleItem(class=(lg ? '--lg' : ''))
+		+e.img-wrap
+			.img-wrap-center
+				+img(`img/${img}`, lg ? 'bg' : '')
+		+e.content
+			a.h3(href="#")!= h
+			span 15 января 2023
+
+			

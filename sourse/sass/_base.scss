@@ -192,6 +192,8 @@ body {
 	// }
 }
 main {
+	display: flex;
+	flex-direction: column;
 	flex-grow: 1;
 }
 // .main-wrapper__inner{
@@ -619,6 +621,7 @@ iframe {
 h1,
 .h1 {
 	font-weight: 700;
+	text-transform: uppercase;
 }
 h2,
 .h2 {

@@ -3,12 +3,13 @@ extends ../layout/main.pug
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
-include ../blocks/headerBlock/_headerBlock.pug
-include ../blocks/sDemanded/_sDemanded.pug
-include ../blocks/sAdvises/_sAdvises.pug
-include ../blocks/sInstitutions/_sInstitutions.pug
-include ../blocks/sMaterials/_sMaterials.pug
-include ../blocks/sEntries/_sEntries.pug
+include ../blocks/sQuestion/_sQuestion.pug
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sDemanded/_sDemanded.pug
+//- include ../blocks/sAdvises/_sAdvises.pug
+//- include ../blocks/sInstitutions/_sInstitutions.pug
+//- include ../blocks/sMaterials/_sMaterials.pug
+//- include ../blocks/sEntries/_sEntries.pug
 //- include ../blocks/sForm/_sForm.pug
 //- include ../blocks/sContent/_sContent.pug
 //- include ../blocks/sContact/_sContact.pug
@@ -17,7 +18,7 @@ include ../blocks/footer/_footer.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= 'main.jpg'
+	- let  bg= '02-ask-mentor.jpg'
 
 block title
 	- let  title= 'Главная'
@@ -28,13 +29,7 @@ block pagecontent
 			
 	.main-center-wrap
 		main
-			+headerBlock()
-			//- +headerBlock()
-			+sDemanded()
-			+sAdvises()
-			+sInstitutions()
-			+sMaterials()
-			+sEntries()
+			+sQuestion()
 		+footer()
 
 

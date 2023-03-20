@@ -1,0 +1,127 @@
+// start .sQuestion
+.sQuestion {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	--sTPB: calc(var(--main-gutter) * 1.33335);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+	position: relative;
+	padding-top: calc(var(--sPT) + rem(24));
+	margin-top: rem(16);
+	@include media-breakpoint-up(md) {
+		margin-top: 0;
+		padding-top: calc(var(--sPT) + rem(45));
+	}
+	&__btn-back {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-size: rem(15);
+		&:hover {
+			.icon {
+				stroke: $white;
+			}
+			span {
+				color: $white;
+			}
+		}
+		& > * {
+			@include mt(0.2s);
+		}
+		.icon {
+			fill: none;
+			stroke: $primary;
+			// stroke: currentColor;
+			flex-shrink: 0;
+			font-size: rem(24);
+			margin-right: var(--main-gutter);
+		}
+		span {
+			display: inline-block;
+			color: $secondary;
+			line-height: 1;
+		}
+	}
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+		max-width: rem(530);
+		h1 {
+			margin-bottom: rem(16);
+		}
+		p {
+			font-size: rem(15);
+			line-height: 130%;
+			color: $secondary;
+		}
+	}
+	&__col {
+	}
+	&__item {
+	}
+	.form-wrap {
+		padding: calc(var(--main-gutter));
+		@include media-breakpoint-up(md) {
+			padding: calc(var(--main-gutter) * 1.33335);
+		}
+		border: 1px solid $border-color;
+		border-radius: $border-radius-xl;
+		width: rem(808);
+		max-width: 100%;
+		textarea {
+			// resize: vertical;
+			min-height: rem(200);
+		}
+		&__row.row {
+			--bs-gutter-y: #{rem(12)};
+			margin-bottom: calc(var(--main-gutter) * 1.33335);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__row-sm.row {
+			align-items: center;
+			--bs-gutter-y: #{rem(16)};
+			@include media-breakpoint-up(md) {
+				--bs-gutter-x: calc(var(--main-gutter) * 1.33335);
+			}
+		}
+		&__agreement {
+			color: #7a7a7a;
+			font-weight: 600;
+			font-size: rem(11);
+			line-height: calc(13 / 11);
+			max-width: 39em;
+			@include media-breakpoint-down(sm) {
+				line-height: 150%;
+			}
+		}
+		&__btn {
+			@include media-breakpoint-down(sm) {
+				width: 100%;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sQuestion

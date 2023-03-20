@@ -1,0 +1,25 @@
+mixin sQuestion(data)
+	// start sQuestion
+	+b.SECTION.sQuestion.section#sQuestion&attributes(attributes)
+		+e.btn-back(href="#")
+			+icon('arrow-narrow-left')
+			span Назад
+		+form-wrap
+			+b.section-title
+				h1 Обращение к&nbsp;ментору
+				p Рыбатекст используется изайнерами, проектировщиками и&nbsp;ронтендерами, когда нужно быстро заполнить
+			+e.row.row
+				.col-sm-6
+					+input('Ваше ФИО')
+					+input('E-mail', 'email')
+				.col-sm-6
+					+input('Вопрос ментору (опишите вкратце себе и свои ожидания от будущей профессии)', 'textarea')
+			+e.row-sm.row
+				.col-sm.order-sm-last
+					+e.agreement Нажимая кнопку &laquo;Задать вопрос&raquo; вы&nbsp;соглашаетесь с&nbsp;условиями 
+						a(href="#") Пользовательского соглашения 
+						| и 
+						a(href="#") Условиями обработки персональных данных
+				.col-sm-auto
+					+e.BUTTON.btn.btn.btn-primary(type="submit") Задать вопрос
+	// end sQuestion

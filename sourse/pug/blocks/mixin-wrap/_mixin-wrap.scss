@@ -679,3 +679,24 @@
 		}
 	}
 }
+
+.page-head {
+	padding-bottom: var(--sPB);
+	padding-top: var(--sPT);
+	@include media-breakpoint-up(md) {
+		--sPT: 0;
+	}
+	h1 {
+		margin-bottom: calc(var(--main-gutter) * 1.33335);
+		line-height: calc(40 / 32);
+	}
+	&__row.row {
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	&__col {
+		@include media-breakpoint-up(xl) {
+			width: calc(rem(288) + var(--bs-gutter-x));
+		}
+	}
+}

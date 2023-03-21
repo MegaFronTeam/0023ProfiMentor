@@ -38,13 +38,13 @@ mixin search()
 			button 
 				+icon("search")
 
-mixin page-head(t,...items)
-	+b.page-head
-		- let l = items.length
-		.container
-			+breadcrumb('Главная',...items)
+//- mixin page-head(t,...items)
+//- 	+b.page-head
+//- 		- let l = items.length
+//- 		.container
+//- 			+breadcrumb('Главная',...items)
 
-			h1= t
+//- 			h1= t
 
 mixin asideContent()
 	+b.aside-block--js
@@ -138,14 +138,6 @@ mixin articleItem(img, h, lg = false)
 			//- a.h3(href="#")!= h
 			span 15 января 2023
 
-mixin asideFilter(banner = true)
-	+b.aside-filters
-		+e.wrap.aside-filters-js
-			+e.row.row
-				block
-			if banner
-				+mentorHelp().d-none.d-lg-flex
-
 //- mixin filterBlock(h, ...btns)
 mixin filterBlock(h)
 	+b.filter-block
@@ -156,5 +148,61 @@ mixin filterBlock(h)
 			block
 			//- each btn in btns
 			//- 	+in-c(`checkbox`, `${btn}`)
+
+mixin asideFilter(direction, qualities)
+	+b.aside-filters
+		+e.wrap.aside-filters-js
+			+e.row.row
+				if qualities
+					.col-sm.col-lg-12
+						+filterBlock(`Качества`)
+							+in-c(`checkbox`, `Все`)
+							+in-c(`checkbox`, `Активность`)
+							+in-c(`checkbox`, `Вежливость`)(checked)
+							+in-c(`checkbox`, `Внимательность`)(disabled)
+							+in-c(`checkbox`, `Искусство`)
+							+in-c(`checkbox`, `Гибкость`)
+							+in-c(`checkbox`, `Оптимизм`)(disabled)
+							+in-c(`checkbox`, `Настойчивость`)
+							+in-c(`checkbox`, `Финансы`)
+							+in-c(`checkbox`, `Усидчивость`)
+							+in-c(`checkbox`, `Трудолюбие`)(checked)
+							+in-c(`checkbox`, `Интроверт`)
+							+in-c(`checkbox`, `Экстраверт`)
+							+in-c(`checkbox`, `Многозадачность`)
+							+in-c(`checkbox`, `Принципиальность`)
+							+in-c(`checkbox`, `Слабая усидчивость`)
+							+in-c(`checkbox`, `Чувство юмора`)
+				if direction
+					.col-sm.col-lg-12
+						+filterBlock(`Направления`)
+							+in-c(`checkbox`, `Все`)
+							+in-c(`checkbox`, `Авто`)
+							+in-c(`checkbox`, `Туризм`)(checked)
+							+in-c(`checkbox`, `Искусство`)(disabled)
+							+in-c(`checkbox`, `Тяжелая промышленность`)
+							+in-c(`checkbox`, `Торговля`)
+							+in-c(`checkbox`, `Связь`)(disabled)
+							+in-c(`checkbox`, `Строительство`)
+							+in-c(`checkbox`, `Финансы`)
+							+in-c(`checkbox`, `IT`)
+							+in-c(`checkbox`, `Электроника`)(checked)
+							+in-c(`checkbox`, `Управление`)
+			+mentorHelp().d-none.d-lg-flex
+
+
+
+mixin page-head(h, filter, dir, qual)
+	+b.page-head
+		h1!= h
+		if filter
+			+e.row.row
+				+e.col.col-lg-4.col-xl-auto.order-lg-last
+					+asideFilter(`${dir}`, `${qual}`)
+				.col-lg-8.col-xl
+					block
+			+mentorHelp().d-lg-none.mt-4
+		else
+			block
 
 

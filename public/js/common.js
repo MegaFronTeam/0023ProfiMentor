@@ -425,6 +425,21 @@ function eventHandler() {
 			}
 		}
 	});
+	var StickyFilter = new hcSticky('.aside-filters-js', {
+		mobileFirst: true,
+		responsive: {
+			992: {
+				stickTo: '.aside-filters',
+				// top: 32,
+				top: 16,
+				bottom: 16,
+			},
+			1200: {
+				top: 24,
+				bottom: 24,
+			}
+		}
+	});
 
 };
 if (document.readyState !== 'loading') {

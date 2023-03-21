@@ -138,4 +138,23 @@ mixin articleItem(img, h, lg = false)
 			//- a.h3(href="#")!= h
 			span 15 января 2023
 
-			
+mixin asideFilter(banner = true)
+	+b.aside-filters
+		+e.wrap.aside-filters-js
+			+e.row.row
+				block
+			if banner
+				+mentorHelp()
+
+//- mixin filterBlock(h, ...btns)
+mixin filterBlock(h)
+	+b.filter-block
+		+e.head
+			h3!= h
+			+e.reset(href="#") Сбросить
+		+e.btns
+			block
+			//- each btn in btns
+			//- 	+in-c(`checkbox`, `${btn}`)
+
+

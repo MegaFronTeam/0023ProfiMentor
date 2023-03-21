@@ -57,6 +57,10 @@
 		// @include media-breakpoint-up(sm) {
 		// 	min-height: unset;
 		// }
+		height: 100%;
+		@include media-breakpoint-up(md) {
+			padding: rem(32);
+		}
 		p {
 			@include media-breakpoint-between(sm, lg) {
 				max-width: 28em;

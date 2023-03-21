@@ -1,11 +1,8 @@
-// start .sEntries
-.sEntries {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+// start .sProfessions
+.sProfessions {
+	--sPT: 0;
+	--sPB: 0;
 	// --sTPB: #{rem()};
-	@include media-breakpoint-down(sm) {
-		display: none;
-	}
 	&__row.row {
 		--bs-gutter-x: #{rem(8)};
 		--bs-gutter-y: var(--bs-gutter-x);
@@ -15,6 +12,12 @@
 	&__col {
 	}
 	&__item {
+	}
+	.profession-item {
+		min-height: rem(200);
+		@include media-breakpoint-up(sm) {
+			min-height: rem(248);
+		}
 	}
 
 	@include media-breakpoint-up(xl) {
@@ -31,4 +34,4 @@
 	}
 	@include media-breakpoint-down(xl) {
 	}
-} // end.sEntries
+} // end.sProfessions

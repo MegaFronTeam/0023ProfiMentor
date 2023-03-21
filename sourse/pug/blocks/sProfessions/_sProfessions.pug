@@ -1,0 +1,14 @@
+mixin sProfessions(data)
+	// start sProfessions
+	+b.SECTION.sProfessions.section#sProfessions&attributes(attributes)
+		+e.row.row
+			- for (var x = 0; x < 3; x++)
+				.col-sm-6.col-xxl-4
+					+professionItem(`Агент по&nbsp;сбыту энергии`, `Рыбатекст используется дизайнерами, проектировщиками и&nbsp;фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым`)
+				.col-sm-6.col-xxl-4
+					+professionItem(`Агент по&nbsp;сбыту энергии`, `Рыбатекст используется дизайнерами, проектировщиками и&nbsp;фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым`)
+				.col-sm-6.col-xxl-4
+					+professionItem(`Архитектор программного обеспечения`, `Рыбатекст используется дизайнерами, проектировщиками и&nbsp;фронтендерами, когда нужно быстро`)
+						+professionProp(`Принципиальность`, `var(--bs-teal)`)
+						+professionProp(`Оптимизм`, `var(--bs-orange)`)
+	// end sProfessions

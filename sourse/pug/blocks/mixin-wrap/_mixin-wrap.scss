@@ -599,6 +599,12 @@
 			@include media-breakpoint-up(lg) {
 				margin-bottom: calc(var(--main-gutter) * 1.33335);
 			}
+			@include media-breakpoint-down(sm) {
+				margin-bottom: calc(var(--main-gutter) * 1.33335);
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 		// --bs-gutter-y: calc(var(--main-gutter) * 1.33335);
 		// @include media-breakpoint-up(lg) {

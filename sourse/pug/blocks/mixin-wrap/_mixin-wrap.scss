@@ -596,7 +596,9 @@
 	height: 100%;
 	&__row.row {
 		& > * {
-			margin-bottom: calc(var(--main-gutter) * 1.33335);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: calc(var(--main-gutter) * 1.33335);
+			}
 		}
 		// --bs-gutter-y: calc(var(--main-gutter) * 1.33335);
 		// @include media-breakpoint-up(lg) {

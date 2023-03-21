@@ -69,7 +69,7 @@ mixin asideContent()
 				+icon('messages')
 
 mixin mentorHelp()
-	+b.mentorHelp
+	+b.mentorHelp&attributes(attributes)
 		h3 Попроси помощи у&nbsp;ментора
 		p Наш специалист поможет вам подобрать профессию исходя из&nbsp;качеств и&nbsp;особенностей вашей личности
 		+e.btn.btn.btn-white(href="#") Написать ментору
@@ -144,7 +144,7 @@ mixin asideFilter(banner = true)
 			+e.row.row
 				block
 			if banner
-				+mentorHelp()
+				+mentorHelp().d-none.d-lg-flex
 
 //- mixin filterBlock(h, ...btns)
 mixin filterBlock(h)

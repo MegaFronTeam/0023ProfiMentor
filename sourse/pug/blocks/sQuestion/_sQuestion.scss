@@ -22,6 +22,7 @@
 		left: 0;
 		top: 0;
 		font-size: rem(15);
+		font-family: $font-family-monospace;
 		&:hover {
 			.icon {
 				stroke: $white;
@@ -60,6 +61,7 @@
 			font-size: rem(15);
 			line-height: 130%;
 			color: $secondary;
+			font-family: $font-family-monospace;
 		}
 	}
 	&__col {

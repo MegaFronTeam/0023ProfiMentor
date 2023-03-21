@@ -7,12 +7,12 @@
 		--bs-gutter-x: #{rem(8)};
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
-	.section-title {
-	}
-	&__col {
-	}
-	&__item {
-	}
+	// .section-title {
+	// }
+	// &__col {
+	// }
+	// &__item {
+	// }
 	.profession-item {
 		min-height: rem(200);
 		@include media-breakpoint-up(sm) {

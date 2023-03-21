@@ -689,6 +689,7 @@
 	padding-top: var(--sPT);
 	@include media-breakpoint-up(md) {
 		--sPT: 0;
+		--sPB: #{rem(8)};
 	}
 	h1 {
 		margin-bottom: calc(var(--main-gutter) * 1.33335);

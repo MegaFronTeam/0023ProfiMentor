@@ -1,0 +1,26 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sInstitute/_sInstitute.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'Квалификация'
+	title= title
+block pagecontent
+	.aside-wrap
+		+asideContent()
+			
+	.main-center-wrap
+		main
+			+page-head(`Квалификация`)
+		//- +footer()
+
+
+

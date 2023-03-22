@@ -23,8 +23,13 @@
 	// &__item{
 
 	// }
-	&__slide {
-		height: auto;
+	// &__slide {
+	// 	height: auto;
+	// }
+	&__wrapper {
+		@include media-breakpoint-up(lg) {
+			max-width: rem(601);
+		}
 	}
 	h2 {
 		@include rfs(40px, margin-bottom);

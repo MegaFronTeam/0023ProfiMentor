@@ -192,9 +192,15 @@ mixin asideFilter(direction, qualities)
 
 
 
-mixin page-head(h, filter, dir, qual)
+mixin page-head(h, filter, dir, qual, sub, back)
 	+b.page-head
-		h1!= h
+		if back
+			+e.btn-back(href="#")
+				+icon('arrow-narrow-left')
+		+e.title
+			h1!= h
+			if sub
+				small!= sub
 		if filter
 			+e.row.row
 				+e.col.col-lg-4.col-xl-auto.order-lg-last

@@ -6,3 +6,4 @@
 4. <https://megafronteam.github.io/0023ProfiMentor/public/04-all-articles.html>
 5. <https://megafronteam.github.io/0023ProfiMentor/public/06-all-recommends.html>
 6. <https://megafronteam.github.io/0023ProfiMentor/public/09-study.html>
+7. <https://megafronteam.github.io/0023ProfiMentor/public/10-institute.html>

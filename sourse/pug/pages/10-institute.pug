@@ -3,15 +3,15 @@ extends ../layout/main.pug
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
-include ../blocks/sQuestion/_sQuestion.pug
+include ../blocks/sInstitute/_sInstitute.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'main-page' 
-	- let  bg= '02-ask-mentor.jpg'
+	- let  mainPage= null
+	- let  bg= '09-study.jpg'
 
 block title
-	- let  title= 'Обращение к ментору'
+	- let  title= 'Обучение'
 	title= title
 block pagecontent
 	.aside-wrap
@@ -19,7 +19,8 @@ block pagecontent
 			
 	.main-center-wrap
 		main
-			+sQuestion()
+			+page-head(`Innopolis University`, '', '', '', '', 'back')
+				+sInstitute()
 		+footer()
 
 

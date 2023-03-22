@@ -445,16 +445,17 @@ function eventHandler() {
 	if (filterBtnsParents) {
 		for (const filterBtnsParent of filterBtnsParents) {
 			let filterBtns = filterBtnsParent.querySelectorAll('.custom-input__input');
-			for (const filterBtn of filterBtns) {
-				filterBtn.addEventListener('click', function () {
-					if (filterBtn.value === 'all') {
+			filterBtnsParent.addEventListener('click', function(event) {
+				let mainBtnTarget = event.target.closest('.custom-input__input[value="all"]');
+				if(mainBtnTarget) {
+					filterBtns.forEach(filterBtn => {
 						filterBtn.checked = false;
-
-
-					}
-				});
-			}
-
+						filterBtnsParent.querySelector('.custom-input__input[value="all"]').checked = true;
+					});
+				} else {
+					filterBtnsParent.querySelector('.custom-input__input[value="all"]').checked = false;
+				}
+			})
 		}
 	}
 };

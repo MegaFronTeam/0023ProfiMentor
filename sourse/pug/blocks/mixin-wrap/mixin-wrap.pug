@@ -156,7 +156,7 @@ mixin asideFilter(direction, qualities)
 				if qualities
 					.col-sm.col-lg-12
 						+filterBlock(`Качества`)
-							+in-c(`checkbox`, `Все`)
+							+in-c(`checkbox`, `Все`)(value="all")
 							+in-c(`checkbox`, `Активность`)
 							+in-c(`checkbox`, `Вежливость`)(checked)
 							+in-c(`checkbox`, `Внимательность`)(disabled)
@@ -176,7 +176,7 @@ mixin asideFilter(direction, qualities)
 				if direction
 					.col-sm.col-lg-12
 						+filterBlock(`Направления`)
-							+in-c(`checkbox`, `Все`)
+							+in-c(`checkbox`, `Все`)(value="all")
 							+in-c(`checkbox`, `Авто`)
 							+in-c(`checkbox`, `Туризм`)(checked)
 							+in-c(`checkbox`, `Искусство`)(disabled)

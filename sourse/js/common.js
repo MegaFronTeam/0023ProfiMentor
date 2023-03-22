@@ -441,6 +441,22 @@ function eventHandler() {
 		}
 	});
 
+	let filterBtnsParents = document.querySelectorAll('.filter-block__btns');
+	if (filterBtnsParents) {
+		for (const filterBtnsParent of filterBtnsParents) {
+			let filterBtns = filterBtnsParent.querySelectorAll('.custom-input__input');
+			for (const filterBtn of filterBtns) {
+				filterBtn.addEventListener('click', function () {
+					if (filterBtn.value === 'all') {
+						filterBtn.checked = false;
+
+
+					}
+				});
+			}
+
+		}
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

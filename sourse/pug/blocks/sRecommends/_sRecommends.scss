@@ -33,13 +33,13 @@
 		}
 		.adviseItem {
 			break-inside: avoid;
-			&__wrap {
-				p {
-					@include media-breakpoint-down(xl) {
-						font-size: rem(16);
-					}
-				}
-			}
+			// &__wrap {
+			// 	p {
+			// 		@include media-breakpoint-down(xl) {
+			// 			font-size: rem(16);
+			// 		}
+			// 	}
+			// }
 		}
 	}
 

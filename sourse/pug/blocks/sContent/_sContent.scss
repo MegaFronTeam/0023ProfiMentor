@@ -85,6 +85,23 @@
 			margin-bottom: 0;
 		}
 	}
+
+	.topicAdvices {
+		// display: flex;
+		// flex-direction: column;
+		// height: 100%;
+		h2 {
+			margin-bottom: rem(24);
+			
+		}
+		.adviseItem {
+			margin-bottom: rem(24);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

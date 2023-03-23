@@ -167,7 +167,8 @@ body {
 		flex: 1 0 auto;
 		max-width: rem(143.891);
 		margin-right: var(--main-gutter);
-		display: flex;
+		// display: flex;
+		width: 100%;
 	}
 }
 .main-center-wrap {

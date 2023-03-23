@@ -671,6 +671,12 @@
 			top: 0;
 			width: 100%;
 			z-index: -1;
+			&:not(:disabled) {
+				&:hover {
+					background-color: $primary;
+					border-color: $primary;
+				}
+			}
 			&.form-check-input:checked[type="checkbox"] {
 				--bs-form-check-bg-image: none;
 				background-color: $primary;
@@ -682,6 +688,9 @@
 					opacity: 0.2;
 				}
 			}
+		}
+		.custom-input__text {
+			pointer-events: none;
 		}
 	}
 }
@@ -736,5 +745,3 @@
 		}
 	}
 }
-
-

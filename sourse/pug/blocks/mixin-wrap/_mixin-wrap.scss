@@ -673,14 +673,21 @@
 			z-index: -1;
 			&:not(:disabled) {
 				&:hover {
-					background-color: $primary;
-					border-color: $primary;
+					// background-color: $primary;
+					// border-color: $primary;
+					& ~ .form-check-label {
+						color: $secondary;
+						color: rgba($color: $white, $alpha: 0.65)
+					}
 				}
 			}
 			&.form-check-input:checked[type="checkbox"] {
 				--bs-form-check-bg-image: none;
 				background-color: $primary;
 				border-color: $primary;
+				& ~ .form-check-label {
+					color: $white;
+				}
 			}
 			&.form-check-input:disabled {
 				opacity: 0.2;
@@ -690,6 +697,7 @@
 			}
 		}
 		.custom-input__text {
+			@include mt(0.2s);
 			pointer-events: none;
 		}
 	}

@@ -8,7 +8,7 @@ include ../blocks/footer/_footer.pug
 
 block variables
 	- let  mainPage= null
-	- let  bg= '09-study.jpg'
+	- let  bg= null
 
 block title
 	- let  title= 'Обучение'
@@ -19,7 +19,8 @@ block pagecontent
 			
 	.main-center-wrap
 		main
-			+page-head(`Обучение`, 'filter', 'dir', '')
+			+page-head(`Обучение`)
+			+page-body('filter', 'dir', '')
 				+sStudy()
 		+footer()
 

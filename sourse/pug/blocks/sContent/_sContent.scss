@@ -2,7 +2,10 @@
 .sContent {
 	position: relative;
 	--sPT: 0;
-	--sPB: 0;
+	@include media-breakpoint-up(md) {
+		--sPT: 0;
+		--sPB: #{rem(8)};
+	}
 	// --sTPB: #{rem()};
 	// --spasing: calc(var(--main-gutter) * 1.6667);
 
@@ -92,7 +95,6 @@
 		// height: 100%;
 		h2 {
 			margin-bottom: rem(24);
-			
 		}
 		.adviseItem {
 			margin-bottom: rem(24);
